@@ -3,6 +3,7 @@ const { connection } = require("./configs/db");
 require("dotenv").config();
 const cors = require("cors");
 
+// ROUTES IMPORT 
 const adminRouter = require("./routes/AdminsRoute");
 const ambulanceRouter = require("./routes/AmbulancesRoute");
 const appointmentRouter = require("./routes/AppointmentsRoute");
@@ -17,6 +18,7 @@ const reportRouter = require("./routes/ReportsRoute");
 
 const app = express();
 
+// MIDDLEWARE
 app.use(express.json());
 app.use(cors());
 
@@ -24,6 +26,7 @@ app.get("/", (req, res) => {
     res.send("Homepage");
 });
 
+// ROUTES
 app.use("/admin", adminRouter);
 app.use("/ambulances", ambulanceRouter);
 app.use("/appointments", appointmentRouter);
@@ -36,6 +39,8 @@ app.use("/payments", paymentRouter);
 app.use("/prescriptions", prescriptionRouter);
 app.use("/reports", reportRouter);
 
+
+// PORT &   MONGODB CONNECTION
 app.listen(process.env.port, async () => {
     try {
         await connection;

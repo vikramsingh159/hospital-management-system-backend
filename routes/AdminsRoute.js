@@ -91,13 +91,13 @@ router.post("/password", (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "agrawaljoy1@gmail.com",
+      user: "er.vikramsingh10@gmail.com",
       pass: "zxkyjqfuhiizmxrg",
     },
   });
 
   const mailOptions = {
-    from: "agrawaljoy1@gmail.com",
+    from: "er.vikramsingh10@gmail.com",
     to: email,
     subject: "Account ID and Password",
     text: `This is your User Id : ${userId} and  Password : ${password} .`,
@@ -147,13 +147,13 @@ router.post("/forgot", async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "agrawaljoy1@gmail.com",
+      user: "er.vikramsingh10@gmail.com",
       pass: "zxkyjqfuhiizmxrg",
     },
   });
 
   const mailOptions = {
-    from: "agrawaljoy1@gmail.com",
+    from: "er.vikramsingh10@gmail.com",
     to: email,
     subject: "Account ID and Password",
     text: `This is your User Id : ${userId} and  Password : ${password} .`,
